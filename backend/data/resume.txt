@@ -1,0 +1,64 @@
+Varshik Chebrolu
+chebroluvarshik@gmail.com | +1 9706902665 | Denver, Colorado
+https://www.linkedin.com/in/varshikchebrolu/ | https://varshikchebrolu.vercel.app/
+Summary
+Software Engineer with more than 4 years of full-stack development experience. Quick to learn new technologies and proficient in
+React, JavaScript, and Agile planning. Excels in collaborative team environments with a strong focus on delivering user-centric
+solutions. Handled the designing of new architecture and implemented the process to improve the efficiency of media rendering by at
+least 25%.
+Skills
+Programming Languages: JavaScript (ES6), Typescript, Java, Python
+Frontend Technologies: React, Next JS, HTML5, CSS3, Redux, Bootstrap, Material UI, Angular
+Backend Technologies: NodeJS, NestJS, Spring boot, RESTful APIs, Sequelize
+Databases and Cloud: MySQL, PostgreSQL, MongoDB, AWS (EC2, Elastic Beanstalk, Cognito, RDS, S3)
+Tools and Platforms: Git, Docker, Jira, Jenkins, Maven, VS Code, Postman, Agile Methodology, Scrum
+Work Experience
+DISH Networks Nov 2024
+–
+Present
+Software Engineer II Englewood, CO
+Payment Tokenization:
+◦ Developed a new payment module using iframe to support multiple payment methods, ensuring secure handling of sensitive
+information through Basis Theory tokenization.
+◦ Led the integration of the iframe-based solution across 5+ teams and various applications, streamlining adoption of the new
+payment system organization-wide.
+◦ Proactively fixed defects and resolved integration issues, maintaining a 99% success rate across all applications migrated to
+the new payment process.
+Spectra Media Collective Oct 2022 –Oct 2024
+Software Developer New York, NY
+◦ Developed responsive UI with React, Typescript, NextJs achieving 98% user-satisfaction score and user-base growth in 3
+months.
+◦ Carried out the image resource handling architecture to operate on over 20,000 objects and improved data retrieval efficiency
+by 25% using PostgreSQL, NestJs and S3.
+◦ Enhanced user satisfaction through UX/UI design improvements and reduced bug fix time by 30% by continuous integration.
+◦ Automated deployments and integration workflows with AWS Cloud Pipeline, reducing release cycles to 1 week.
+Clearwater Analytics Jun 2022
+–
+Aug 2022
+Software Developer Intern Boise, ID
+◦ Co-developed a version management tool for 3 organizational applications within 6 weeks using Angular, JavaScript, and
+Bootstrap.
+◦ Designed and deployed RESTful APIs with Kotlin and Bitbucket, performed unit and integration testing using Jenkins,
+increasing bug resolution rate by 20% and ensuring 80% code coverage.
+Infosys Ltd. Jul 2019
+-
+Jul 2021
+Full-Stack Developer Hyderabad, India
+◦ Worked with senior developers and UX designers to identify business requirements, boosting solution delivery by 20% .
+◦ Implemented and integrated over 30 interactive elements in an e-commerce single-page web application using React and
+JavaScript.
+◦ Optimized data rendering and loading reducing page load time to under 3 seconds and delivering a seamless user experience.
+Projects
+Automated Testing Approaches for Java Projects [Java, Evosuite, Randoop, Software testing] Feb 2022
+◦ Conducted a comparative study on 30 open-source small-scale Java projects using automation testing tools.
+◦ Validated more than 500 test cases for all classes on each project, evaluating results on time and speed.
+Legan Chess Game [React, JavaScript, Java, Object Oriented Design Principles] Sept 2021
+◦ Developed user friendly chess interface using React, JavaScript and pieces movements in Java.
+◦ Maintained real time interaction using web sockets between the UI and services with less than 1 sec delay.
+Education
+Colorado State University Aug 2021
+–
+May 2023
+MS in Computer Science Fort Collins, CO
+Certifications
+• LinkedIn certified Front-end developer

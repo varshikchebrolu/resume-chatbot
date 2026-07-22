@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.messageRow {
+  display: flex;
+
+  &.user {
+    justify-content: flex-end;
+  }
+
+  &.assistant {
+    justify-content: flex-start;
+  }
+}
+
+.bubble {
+  max-width: 80%;
+  border-radius: 1rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+
+  &.userBubble {
+    background: $blue-600;
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  &.assistantBubble {
+    background: white;
+    color: $zinc-800;
+    border: 1px solid $zinc-200;
+    border-bottom-left-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bubble.assistantBubble {
+    background: $zinc-800;
+    color: $zinc-200;
+    border-color: $zinc-700;
+  }
+}

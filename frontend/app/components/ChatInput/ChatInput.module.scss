@@ -1,0 +1,84 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  border-top: 1px solid $zinc-200;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+}
+
+.form {
+  max-width: 42rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  border-radius: 0.75rem;
+  border: 1px solid $zinc-300;
+  background: white;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  color: $zinc-800;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &::placeholder {
+    color: $zinc-400;
+  }
+
+  &:focus {
+    border-color: $blue-600;
+    box-shadow: 0 0 0 3px rgba($blue-600, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.sendButton {
+  border-radius: 0.75rem;
+  background: $blue-600;
+  color: white;
+  border: none;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) {
+    background: $blue-700;
+  }
+
+  &:disabled {
+    background: $zinc-300;
+    color: $zinc-500;
+    cursor: not-allowed;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-color: $zinc-800;
+    background: rgba($zinc-900, 0.8);
+  }
+
+  .input {
+    border-color: $zinc-700;
+    background: $zinc-800;
+    color: $zinc-200;
+
+    &::placeholder {
+      color: $zinc-500;
+    }
+  }
+
+  .sendButton:disabled {
+    background: $zinc-700;
+  }
+}

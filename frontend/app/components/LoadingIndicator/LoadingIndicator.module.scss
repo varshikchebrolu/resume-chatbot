@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.loadingRow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.loadingBubble {
+  background: white;
+  border: 1px solid $zinc-200;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 0.375rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: $zinc-400;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+
+  &:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .loadingBubble {
+    background: $zinc-800;
+    border-color: $zinc-700;
+  }
+}
