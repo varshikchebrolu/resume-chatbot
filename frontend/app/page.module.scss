@@ -1,0 +1,81 @@
+@use "./styles/variables" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, $zinc-50, $zinc-100);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: $zinc-900;
+}
+
+.inner {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: $zinc-500;
+  margin: 0 0 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: block;
+  text-align: left;
+  padding: 1.25rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.75rem;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    color: $blue-600;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $zinc-500;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    border-color: $blue-600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(to bottom, $zinc-900, $zinc-950);
+    color: $zinc-100;
+  }
+
+  .card {
+    background: $zinc-900;
+    border-color: $zinc-800;
+  }
+}

@@ -1,6 +1,9 @@
 @use "../../styles/variables" as *;
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid $zinc-200;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
@@ -11,6 +14,17 @@
     font-weight: 600;
     color: $zinc-800;
     margin: 0;
+  }
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: $blue-600;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-700;
+    text-decoration: underline;
   }
 }
 

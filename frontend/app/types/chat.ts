@@ -1,9 +1,9 @@
-import type { Message } from "@ai-sdk/react";
+import type { UIMessage } from "@ai-sdk/react";
 
 export type ChatStatus = "streaming" | "submitted" | "ready" | "error";
 
 export interface ChatMessageProps {
-  message: Message;
+  message: UIMessage;
 }
 
 export interface ChatInputProps {
@@ -14,6 +14,6 @@ export interface ChatInputProps {
 }
 
 export interface MessageListProps {
-  messages: Message[];
+  messages: UIMessage[];
   isLoading: boolean;
 }

@@ -1,0 +1,120 @@
+@use "../../styles/variables" as *;
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $zinc-700;
+}
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.4rem;
+  background: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: $zinc-100;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btnPrimary {
+  align-self: flex-start;
+  padding: 0.35rem 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: $blue-600;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: $blue-700;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.paste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.5rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.4rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+}
+
+.preview {
+  font-size: 0.78rem;
+  color: $zinc-500;
+  margin: 0;
+  line-height: 1.4;
+  max-height: 3.6em;
+  overflow: hidden;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #b91c1c;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrap {
+    background: $zinc-900;
+    border-color: $zinc-800;
+  }
+  .badge {
+    color: $zinc-300;
+  }
+  .btn {
+    background: $zinc-800;
+    border-color: $zinc-700;
+    color: $zinc-100;
+    &:hover:not(:disabled) {
+      background: $zinc-700;
+    }
+  }
+  .textarea {
+    background: $zinc-900;
+    border-color: $zinc-700;
+    color: $zinc-100;
+  }
+}

@@ -1,0 +1,147 @@
+@use "../../../styles/variables" as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $zinc-50, $zinc-100);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: $zinc-900;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $zinc-200;
+  background: rgba(255, 255, 255, 0.6);
+
+  h1 {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+}
+
+.back {
+  font-size: 0.9rem;
+  color: $blue-600;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.muted {
+  color: $zinc-500;
+}
+.error {
+  color: #b91c1c;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: $blue-600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.scoreValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scoreLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: $zinc-700;
+  p {
+    margin: 0.2rem 0;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 1rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0;
+  max-height: 420px;
+  overflow: auto;
+}
+
+.copyButton {
+  align-self: flex-start;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.82rem;
+  cursor: pointer;
+  &:hover {
+    background: $zinc-100;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(to bottom, $zinc-900, $zinc-950);
+    color: $zinc-100;
+  }
+  .header {
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom-color: $zinc-800;
+  }
+  .text {
+    background: $zinc-900;
+    border-color: $zinc-700;
+    color: $zinc-100;
+  }
+  .copyButton {
+    background: $zinc-800;
+    border-color: $zinc-700;
+    color: $zinc-100;
+  }
+}

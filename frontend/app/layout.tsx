@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Resume Chatbot",
-  description: "Chat with an AI that knows my resume",
+  title: "Resume Toolkit",
+  description: "Optimize your resume against a JD and chat with your resume",
 };
 
 export default function RootLayout({

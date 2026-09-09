@@ -1,0 +1,27 @@
+# --- Web framework / server ---
+fastapi==0.140.13
+uvicorn==0.48.0
+python-multipart==0.0.29
+slowapi==0.1.10
+
+# --- Config ---
+python-dotenv==1.2.2
+pydantic-settings==2.14.1
+
+# --- AI / RAG ---
+google-genai==2.13.0
+numpy==2.5.0
+
+# --- Database ---
+sqlalchemy==2.0.51
+psycopg==3.3.4
+
+# --- Resume file parsing ---
+pypdf==6.18.0
+docx2txt==0.9
+
+# --- Optimizer (LangGraph workflow) ---
+langgraph==1.2.6
+langgraph-checkpoint-postgres==3.1.0
+langchain-core==1.4.8
+pydantic-ai==1.104.0

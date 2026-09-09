@@ -1,0 +1,347 @@
+@use "../styles/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $zinc-50, $zinc-100);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: $zinc-900;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $zinc-200;
+  background: rgba(255, 255, 255, 0.6);
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: $blue-600;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-700;
+    text-decoration: underline;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  background: #fff;
+  color: $zinc-900;
+
+  &:focus {
+    outline: none;
+    border-color: $blue-600;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+}
+
+.savedNote {
+  font-size: 0.85rem;
+  color: $zinc-500;
+
+  a {
+    color: $blue-600;
+  }
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $zinc-700;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.75rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: #fff;
+  color: $zinc-900;
+
+  &:focus {
+    outline: none;
+    border-color: $blue-600;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button {
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: $blue-600;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: $blue-700;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: $zinc-500;
+}
+
+.error {
+  padding: 0.75rem 1rem;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: $blue-600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.scoreValue {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scoreLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: $zinc-700;
+
+  p {
+    margin: 0.2rem 0;
+  }
+}
+
+.keywordCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.keywordCard {
+  padding: 1rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.5rem;
+  background: #fff;
+
+  h3 {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    color: $zinc-700;
+  }
+}
+
+.empty {
+  font-size: 0.85rem;
+  color: $zinc-400;
+  margin: 0;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.matched {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.missing {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.resumeBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  h2 {
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+.resumeText {
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 1rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: $zinc-900;
+  margin: 0;
+  max-height: 480px;
+  overflow: auto;
+}
+
+.copyButton {
+  align-self: flex-start;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $zinc-100;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(to bottom, $zinc-900, $zinc-950);
+    color: $zinc-100;
+  }
+
+  .header {
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom-color: $zinc-800;
+  }
+
+  .label {
+    color: $zinc-300;
+  }
+
+  .textarea,
+  .input,
+  .keywordCard,
+  .resumeText {
+    background: $zinc-900;
+    border-color: $zinc-700;
+    color: $zinc-100;
+  }
+
+  .meta {
+    color: $zinc-300;
+  }
+
+  .copyButton {
+    background: $zinc-800;
+    border-color: $zinc-700;
+    color: $zinc-100;
+
+    &:hover {
+      background: $zinc-700;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@use "../../styles/variables" as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $zinc-50, $zinc-100);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: $zinc-900;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $zinc-200;
+  background: rgba(255, 255, 255, 0.6);
+
+  h1 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: $blue-600;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.muted {
+  color: $zinc-500;
+  a {
+    color: $blue-600;
+  }
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.cardTitle {
+  font-weight: 600;
+  color: $blue-600;
+}
+
+.cardMeta {
+  font-size: 0.8rem;
+  color: $zinc-500;
+}
+
+.delete {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.4rem;
+  background: #fff;
+  font-size: 0.8rem;
+  color: #b91c1c;
+  cursor: pointer;
+
+  &:hover {
+    background: #fef2f2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(to bottom, $zinc-900, $zinc-950);
+    color: $zinc-100;
+  }
+  .header {
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom-color: $zinc-800;
+  }
+  .card {
+    background: $zinc-900;
+    border-color: $zinc-800;
+  }
+  .delete {
+    background: $zinc-800;
+    border-color: $zinc-700;
+  }
+}

@@ -1,0 +1,75 @@
+@use "../styles/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, $zinc-50, $zinc-100);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.jdBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jdToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid $zinc-200;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.8rem;
+  color: $zinc-700;
+  cursor: pointer;
+
+  &:hover {
+    background: $zinc-100;
+  }
+}
+
+.jdTextarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.6rem;
+  border: 1px solid $zinc-300;
+  border-radius: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: linear-gradient(to bottom, $zinc-900, $zinc-950);
+  }
+
+  .jdToggle {
+    background: $zinc-900;
+    border-color: $zinc-800;
+    color: $zinc-300;
+
+    &:hover {
+      background: $zinc-800;
+    }
+  }
+
+  .jdTextarea {
+    background: $zinc-900;
+    border-color: $zinc-700;
+    color: $zinc-100;
+  }
+}
